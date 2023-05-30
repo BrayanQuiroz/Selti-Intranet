@@ -5,6 +5,8 @@ import { Colors } from './Colors';
 
 const HeaderContainer = styled.header`
    background-color: ${Colors.primareyColor};
+   position: sticky;
+   top: 0px;
 
    & div{
       max-width: 85rem;

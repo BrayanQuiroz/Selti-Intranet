@@ -53,6 +53,8 @@ const Nav = styled.nav`
    background-color: white;
    padding: 0 1.5rem 0 1.5rem;
    color: ${Colors.primareyColor};
+   position: sticky;
+   top: 83.56px;
 
    & div{
       display: flex;

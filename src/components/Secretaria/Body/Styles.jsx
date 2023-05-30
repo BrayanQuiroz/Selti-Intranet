@@ -16,7 +16,7 @@ export const IconInst = styled(BsClipboard)`
 const Left = styled.div`
 
    width: 270px;
-   height: 100vh;
+   height: calc(100vh - (155.56px));
    background-color:white;
    position: fixed;
    left: ${({ isopen }) => (isopen ? '0' : '-270px')};
