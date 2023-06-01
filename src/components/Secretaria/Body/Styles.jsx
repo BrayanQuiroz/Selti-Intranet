@@ -23,6 +23,7 @@ const Left = styled.div`
    transition: left 0.3s ease;
    font-weight: 600;
 
+
    & .Icons{
       display: flex; 
       color:${Colors.primareyColor} ;
@@ -46,3 +47,23 @@ export const LeftNav = ({ children, isopen }) => {
       </Left> 
    );
 }
+
+export const ContainerBody = styled.div`
+   width: calc(100% - 320px);
+   height: 71vh;
+   background-color:white;
+   position: relative;
+   top: 30px;
+   right: -300px;
+   padding: 1.5rem;
+
+   & h2{
+      font-size: 35px;
+      color: ${Colors.primareyColor};
+   }
+
+   & .bodyP{
+      width: 90%;
+      height: 100%;
+   }
+`;

@@ -2,7 +2,7 @@ import { useState} from 'react';
 import { ContainerNav } from './Styles'
 import NavBar from './NavBar';
 import { LeftNav, IconInst, IconPen } from './Body/Styles';
-
+import Body from './Body/Index'
 
 const Index = (props) => {
    
@@ -26,6 +26,7 @@ const Index = (props) => {
                   <p>Instruciones</p>
                </div>
             </LeftNav>
+            <Body />
          </main>
       </ContainerNav> 
    );

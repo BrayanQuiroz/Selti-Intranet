@@ -33,7 +33,7 @@ export const CloseLogin = styled(FaSignOutAlt)`
 const Container = styled.div`
    background-color: ${Colors.backgroundColor};
    width: 100%;
-   height: 100vh;
+   height: 100%;
 `;
 
 export const ContainerNav = ({children}) => {
