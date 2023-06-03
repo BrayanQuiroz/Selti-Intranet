@@ -9,8 +9,7 @@ const SelectWrapper = styled.div`
 const Select = styled.select`
    display: block;
    width: ${props => props.width || '100%'}; 
-   height: calc(1.5em + 0.75rem + 2px);
-   padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+   height:  30px;
    font-size: 1rem;
    font-weight: 400;
    line-height: 1.5;

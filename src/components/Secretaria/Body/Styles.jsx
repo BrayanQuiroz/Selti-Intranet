@@ -66,4 +66,10 @@ export const ContainerBody = styled.div`
       width: 90%;
       height: 100%;
    }
+
+   & .searchs{
+      width: 100%;
+      display: flex;
+
+   }
 `;

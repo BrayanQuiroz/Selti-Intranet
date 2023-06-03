@@ -3,6 +3,7 @@ import { ContainerNav } from './Styles'
 import NavBar from './NavBar';
 import { LeftNav, IconInst, IconPen } from './Body/Styles';
 import Body from './Body/Index'
+import Tables from '../utils/Tables';
 
 const Index = (props) => {
    
