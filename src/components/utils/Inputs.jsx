@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Colors } from './Colors';
 
@@ -6,7 +7,7 @@ const Inputs = styled.input`
   display: block;
   width:100%;
   padding: .375rem .75rem;
-  height: 30px;
+  height: 28px;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -32,27 +33,49 @@ const Label = styled.label`
   font-size: 1rem;
   margin-bottom: 0.5rem;
   font-weight:600;
+  margin-right: 1rem; 
+  margin-top: 0.5rem;
 `;
 
 const InputWrapper = styled.div`
   width: ${props => props.width || '100%'}; 
-  padding-top: 1rem;
+  padding-top: 1.5rem;
+  margin-right: 1rem;
   color:${Colors.secundaryColor};
 `;
 
-const InputCustom = ({ label,...props }) => (
-  <InputWrapper {...props}>
-     <Label>{label}</Label>
-    <Inputs {...props} />
-   </InputWrapper>
- );
- 
- InputCustom.propTypes = {
-   label: PropTypes.string.isRequired,
-   width: PropTypes.string,
- };
- 
- export default InputCustom;
+
+const RestrictedInput = ({ restriction, label, ...props }) => {
+  const [value, setValue] = useState('');
+
+  const handleChange = (event) => {
+    let inputValue = event.target.value;
+
+    if (restriction === 'numeric') {
+      // Filtrar solo números
+      inputValue = inputValue.replace(/[^0-9]/g, '');
+    } else if (restriction === 'alphanumeric') {
+      // Filtrar solo caracteres alfanuméricos
+      inputValue = inputValue.replace(/[^a-zA-Z0-9]/g, '');
+    }
+
+    setValue(inputValue);
+  };
+
+  return (
+    <InputWrapper {...props}>
+      <Label>{label}</Label>
+      <Inputs type="text" value={value} onChange={handleChange} placeholder={`Ingrese ${restriction === 'numeric' ? 'solo números' : 'caracteres alfanuméricos'}`} />
+    </InputWrapper>
+  );
+};
+
+RestrictedInput.propTypes = {
+  restriction: PropTypes.oneOf(['numeric', 'alphanumeric']).isRequired,
+  label: PropTypes.string.isRequired,
+};
+
+export default RestrictedInput;
 
 
 

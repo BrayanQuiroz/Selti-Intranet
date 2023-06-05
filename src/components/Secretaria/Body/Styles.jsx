@@ -19,7 +19,6 @@ const Left = styled.div`
    height: calc(100vh - (155.56px));
    background-color:white;
    position: fixed;
-   left: ${({ isopen }) => (isopen ? '0' : '-270px')};
    transition: left 0.3s ease;
    font-weight: 600;
 
@@ -39,10 +38,10 @@ const Left = styled.div`
       }
 `;
 
-export const LeftNav = ({ children, isopen }) => { 
+export const LeftNav = ({ children}) => { 
 
    return (
-      <Left isopen={isopen}>
+      <Left>
          {children}
       </Left> 
    );
@@ -56,10 +55,25 @@ export const ContainerBody = styled.div`
    top: 30px;
    right: -300px;
    padding: 1.5rem;
+     
+   & .ant-switch {
+      margin-top: 1rem;
+      margin-right: 1rem;
+   }
+
+   & button{
+      margin-top: 1rem;
+   }
+
+   & p{
+      margin-right: 1rem;
+      margin-top:1rem;
+   }
 
    & h2{
       font-size: 35px;
       color: ${Colors.primareyColor};
+      margin-bottom: 1rem;
    }
 
    & .bodyP{
@@ -70,6 +84,13 @@ export const ContainerBody = styled.div`
    & .searchs{
       width: 100%;
       display: flex;
+      margin-bottom: 2rem;
+      border-top: 2px solid ${Colors.primareyColor};
 
+      & div{
+         display: flex;
+         align-items:center;
+         align-self:center      
+      }
    }
 `;

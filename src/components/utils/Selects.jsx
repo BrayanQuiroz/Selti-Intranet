@@ -2,6 +2,7 @@ import styled from "styled-components";
 import PropTypes from 'prop-types';
 
 const SelectWrapper = styled.div`
+  padding-top: 1.5rem;
   width: ${props => props.width || '47%'};
   margin-right: 1rem;
 `;
@@ -18,6 +19,7 @@ const Select = styled.select`
    background-clip: padding-box;
    border: 1px solid #ced4da;
    border-radius: 0.25rem;
+   padding-left: 1rem;
    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
    &:focus{
@@ -34,6 +36,8 @@ const Select = styled.select`
 const Label = styled.label`
   display: block;
   margin-bottom: 0.5rem;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
 `;
 
 const InputCustom = ({ label, options, value, onChange,width }) => (

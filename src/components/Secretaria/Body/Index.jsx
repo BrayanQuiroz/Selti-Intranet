@@ -1,126 +1,83 @@
 import React, { useState} from 'react';
 import { ContainerBody } from './Styles'
-import Tables from '../../utils/Tables';
-import { Table } from 'antd';
-import { Colors } from '../../utils/Colors';
+import { Table,Switch } from 'antd';
 import Inputs from '../../utils/Inputs'
 import Select from '../../utils/Selects';
-
+import {columns, EtapaSelect, Edicion} from './Exports';
+import Button from '../../utils/Buttons';
+import {RegistradoButton,InfPendiente} from './Estados/'
 
 const Index = (props) => {
 
-   const headers = ['Id del Caso', 'RUC', 'usuario123', 'Útima modificación',
-      'Etapa',
-      'Estado',
-      'Acciones'
-   ]
 
-   const data2 = 
-      {
-         id: 'Id del Caso',
-         RUC: 'RUC',
-         Asignado: 'Asignado',
-         ulmod: 'Última modificación',
-         etapa: 'Etapa',
-         estado: 'registrado',
-         acciones: 'Acciones',
-      }
-   
-
-      const data3 = [[
-         <span>{data2.id}</span>,
-         <span>{data2.RUC}</span>,
-         <span>{data2.Asignado}</span>,
-         <span>{data2.ulmod}</span>,
-         <span>{data2.etapa}</span>,
-         <span>{data2.estado}</span>,
-         <span>{data2.acciones}</span>]
-   ]
-   
+      const onChange = (checked) => {
+         console.log(`switch to ${checked}`);
+       };
+       
    const dataSource = [
       {
-        key: '1',
-        name: 'John Doe',
-        age: 25,
-        address: '123 Street, City',
+         key: '1',
+         id: 'SELTI-0001',
+         ruc: '10725169910',
+         asignado: 'usuario1223',
+         ultmod: '10-10-2023',
+         etapa: 'Asistencia Técnica',
+         estado: <RegistradoButton />,
+         acciones: <button>Accion</button>
+         
       },
       {
-        key: '2',
-        name: 'Jane Smith',
-        age: 30,
-        address: '456 Avenue, Town',
+         key: '2',
+         id: 'SELTI-0002',
+         ruc: '10725169910',
+         asignado: 'usuario1678678',
+         ultmod: '10-10-2023',
+         etapa: 'Asistencia Técnica',
+         estado: <InfPendiente />,
+         acciones: <button>Accion</button>
       }
     ];
     
-    const columns = [
-      {
-        title: 'Id del caso',
-        dataIndex: 'name',
-          key: 'name',
-          style: {  color: 'red' }
-      },
-      {
-        title: 'RUC',
-        dataIndex: 'age',
-        key: 'age',
-      },
-      {
-        title: 'Asignado',
-        dataIndex: 'address',
-        key: 'address',
-       },
-       {
-         title: 'Asignado',
-         dataIndex: 'address',
-         key: 'address',
-       },
-       
-      {
-         title: 'Asignado',
-         dataIndex: 'address',
-         key: 'address',
-       },
-      
-       {
-         title: 'Asignado',
-         dataIndex: 'address',
-         key: 'address',
-       },
-       
-      {
-         title: 'Asignado',
-         dataIndex: 'address',
-         key: 'address',
-        },
-      
-   ];
 
    const [selectedOption, setSelectedOption] = useState('');
 
    const handleSelectChange = (event) => {
      setSelectedOption(event.target.value);
    };
-   
-   const options = [
-      { value: '03', label: 'DOCUMENTO DE IDENTIDAD' },
-      { value: '06', label: 'CARNET DE EXTRANJERÍA' },
-      { value: '26', label: 'CARNET DE PERMISO TEMPORAL DE PERMANENCIA' },
-    ];
 
+   const [selectedOption2, setSelectedOption2] = useState('');
+
+   const handleSelectChange2 = (event) => {
+     setSelectedOption2(event.target.value);
+   };
+   
    return (
       <ContainerBody>
          <h2>Bandeja de tareas pendientes</h2>
          <div className='searchs'>
-            <Inputs label='Razón social' width='25%' />
+            <Inputs label='RUC' width='170px' restriction="numeric"/>
             <Select
-                  label="Tipo de documento*"
-                  options={options}
-                  value={selectedOption}
-                  onChange={handleSelectChange} />
+               width='240px'
+               label="Etapa"
+               options={EtapaSelect}
+               value={selectedOption}
+               onChange={handleSelectChange} />
+            <Select
+               width='150px'
+               label="Edición"
+               options={Edicion}
+               value={selectedOption2}
+               onChange={handleSelectChange2} />
+            <div className='switch'>
+               <p>Solo sin realizar</p>
+               <Switch defaultChecked onChange={onChange} />
+               <Button width='100px' text='Filtar'/>
+            </div>
          </div>
          <div className='bodyP'>
             <Table dataSource={dataSource} columns={columns}  pagination={false}/>
          </div>
+
       </ContainerBody>
    );
 }

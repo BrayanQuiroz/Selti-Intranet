@@ -1,4 +1,3 @@
-import { useState} from 'react';
 import { ContainerNav } from './Styles'
 import NavBar from './NavBar';
 import { LeftNav, IconInst, IconPen } from './Body/Styles';
@@ -7,17 +6,11 @@ import Tables from '../utils/Tables';
 
 const Index = (props) => {
    
-   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-
-   const toggleSidebar = () => {
-       setIsSidebarOpen(!isSidebarOpen);
-   }
-
    return (
       <ContainerNav>
-         <NavBar toggleSidebar={toggleSidebar } />
+         <NavBar />
          <main>
-            <LeftNav isopen={isSidebarOpen}>
+            <LeftNav>
                <div className='Icons'>
                   <IconPen />
                   <p>Bandeja de Pendientes</p>
