@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BsClipboard, BsBookmark } from "react-icons/bs";
+import { BsClipboard, BsBookmark,BsGear,BsFillCaretRightFill } from "react-icons/bs";
 import { Colors } from "../../utils/Colors";
 import { lighten } from 'polished';
 
@@ -11,6 +11,17 @@ export const IconPen = styled(BsBookmark)`
 export const IconInst = styled(BsClipboard)`
    font-size: 2rem;
    margin-right:1rem;
+`;
+
+export const IconGear = styled(BsGear)`
+   font-size: 2rem;
+   margin-right:1rem;
+`;
+
+export const IconCaret = styled(BsFillCaretRightFill)`
+   font-size: 1rem;
+   margin-right:.3rem;
+   color:${Colors.primareyColor} ;
 `;
 
 const Left = styled.div`

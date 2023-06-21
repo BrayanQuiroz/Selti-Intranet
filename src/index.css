@@ -184,3 +184,33 @@ html{
 body {
   height: 100%; /* establece la altura del html y body al 100% para que el footer ocupe la posición correcta */
 }
+
+
+.AccordionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  margin-left: 4rem;
+}
+
+.AccordionContent.open {
+  max-height: 500px;
+  margin-left: 3.5rem;
+  color: #DC2626;
+}
+
+.AccordionContent.open > p{
+  cursor: pointer;
+  display: flex; 
+  align-items: center;
+  cursor: pointer;
+  padding:0.5rem 0rem 0.5rem 0.5rem;
+  width: 170px;
+  border-radius:25px;
+}
+
+.AccordionContent.open > p:hover{
+
+  background-color:#E8E8E8; 
+}
+

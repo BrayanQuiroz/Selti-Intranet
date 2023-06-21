@@ -1,6 +1,6 @@
 import { ContainerNav } from './Styles'
 import NavBar from './NavBar';
-import { LeftNav, IconInst, IconPen } from './Body/Styles';
+import {  IconInst, IconPen } from './Body/Styles';
 import Body from './Body/Index'
 import Tables from '../utils/Tables';
 
@@ -10,7 +10,7 @@ const Index = (props) => {
       <ContainerNav>
          <NavBar />
          <main>
-            <LeftNav>
+            {/* <LeftNav>
                <div className='Icons'>
                   <IconPen />
                   <p>Bandeja de Pendientes</p>
@@ -19,7 +19,7 @@ const Index = (props) => {
                   <IconInst />
                   <p>Instruciones</p>
                </div>
-            </LeftNav>
+            </LeftNav> */}
             <Body />
          </main>
       </ContainerNav> 
