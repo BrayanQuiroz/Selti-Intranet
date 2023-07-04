@@ -3,6 +3,8 @@ import { Colors } from '../utils/Colors';
 import { FaBars, FaSignOutAlt } from "react-icons/fa";
 import { darken } from 'polished';
 
+
+
 const IconMenu = styled(FaBars)`
    font-size: 2rem;
    cursor: pointer;

@@ -40,6 +40,90 @@ export const columns = [
    
 ];
 
+export const columnsInterno = [
+  {
+    title: 'ID Interno',
+    dataIndex: 'id',
+      key: 'id',
+  },
+  {
+    title: 'Nombre',
+    dataIndex: 'Nombre',
+    key: 'Nombre',
+  },
+   {
+     title: 'Rol',
+     dataIndex: 'Rol',
+     key: 'Rol',
+   },
+   
+  {
+     title: 'Última acceso',
+     dataIndex: 'acceso',
+     key: 'acceso',
+ },
+ {
+   title: 'Correo',
+   dataIndex: 'Correo',
+   key: 'Correo',
+ },
+  
+   {
+     title: 'Estado',
+     dataIndex: 'estado',
+     key: 'estado',
+   },
+   
+  {
+     title: 'Acciones',
+     dataIndex: 'acciones',
+     key: 'acciones',
+    },
+  
+];
+
+export const columnsAdmin = [
+  {
+    title: 'Id del caso',
+    dataIndex: 'id',
+      key: 'id',
+  },
+  {
+    title: 'RUC',
+    dataIndex: 'RUC',
+    key: 'RUC',
+  },
+   {
+     title: 'DNI',
+     dataIndex: 'DNI',
+     key: 'DNI',
+   },
+   
+  {
+     title: 'Última modificación',
+     dataIndex: 'ultmod',
+     key: 'ultmod',
+ },
+ {
+   title: 'Correo',
+   dataIndex: 'Correo',
+   key: 'Correo',
+ },
+  
+   {
+     title: 'Estado',
+     dataIndex: 'estado',
+     key: 'estado',
+   },
+   
+  {
+     title: 'Acciones',
+     dataIndex: 'acciones',
+     key: 'acciones',
+    },
+  
+];
+
 export const EtapaSelect = [
   { value: '01', label: 'Asistencia Técnica' },
   { value: '02', label: 'Postulación' },

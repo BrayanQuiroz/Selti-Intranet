@@ -39,5 +39,54 @@ export const RowContainer = styled.div`
   height: 63px;
   display: flex;
   justify-content: space-between;
-  margin: 2rem 0 2rem 0;
+  margin: 1rem 0 0rem 0;
+
+  & .flex{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+  }
+
+  & div p:first-of-type{
+    color:red;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  & select:first-of-type{
+    width: 60%;
+    margin-right: 1.3rem;
+  }
+`;
+
+
+export const ContentInputButton = styled.div`
+  display: flex;
+  width: ${props => props.width || '47%;'};
+  height: 63px;
+
+  & button{
+    margin-top: 2.5rem;
+  }
+  & p{
+      background-color:red;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .select{
+      width:87%;
+    }
+
+    .errorContainer{
+        display: flex;
+        width: ${props => props.width || '47%;'};
+        height: 63px;
+        & p{
+            background-color:red;
+            display: inline-block;
+            width: 100%;
+          }
+      
+    }
 `;

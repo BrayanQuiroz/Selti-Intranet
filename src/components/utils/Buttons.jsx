@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { Colors } from "./Colors";
 
 const StyledButton = styled.button`
-  padding: 8px 20px;
+  padding: 2px 20px;
   margin-top: ${({ isMarginTop }) => isMarginTop ? "27px" : "0px"};
-  height: 38px;
+  height: 30px;
   background-color: ${Colors.primareyColor};
   color: #fff;
   border: none;

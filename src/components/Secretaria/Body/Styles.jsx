@@ -66,15 +66,28 @@ export const ContainerBody = styled.div`
    top: 30px;
    right: -300px;
    padding: 1.5rem;
+
+   & .title{
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+   }
+
+   & .addUser{
+      border: none;
+      background-color:${Colors.primareyColor};
+      font-size: 1.3rem;
+      padding: .5rem 1rem;
+      border-radius: 10px;
+      color:white;
+      margin-bottom: 1rem;
+   }
      
    & .ant-switch {
       margin-top: 1rem;
       margin-right: 1rem;
    }
 
-   & button{
-      margin-top: 1rem;
-   }
 
    & p{
       margin-right: 1rem;

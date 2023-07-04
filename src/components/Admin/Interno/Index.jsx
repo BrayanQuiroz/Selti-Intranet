@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { ContainerNav } from '../Secretaria/Styles'
-import NavBar from '../Secretaria/NavBar';
-import { LeftNav } from '../utils/LeftNav';
-import {  IconInst, IconPen, IconGear, IconCaret } from '../Secretaria/Body/Styles';
-import PersonJuridica from './PersonJuridica/Index'
-import Interno from './Interno/Index'
+import { ContainerNav } from '../../Secretaria/Styles'
+import NavBar from '../../Secretaria/NavBar';
+import { LeftNav } from '../../utils/LeftNav';
+import {  IconInst, IconPen, IconGear, IconCaret } from '../../Secretaria/Body/Styles';
+import Body from './Body.jsx'
 
 const Index = (props) => {
 
@@ -17,7 +16,6 @@ const Index = (props) => {
    
    return (
       <ContainerNav>
-         <NavBar />
          <main>
             <LeftNav>
                <div className='Icons hover'>
@@ -38,8 +36,7 @@ const Index = (props) => {
                   <p><span><IconCaret /></span>Edición</p>
                </div>
             </LeftNav>
-            <Interno />
-            {/* <PersonJuridica /> */}
+            <Body />
          </main>
       </ContainerNav> 
    );
