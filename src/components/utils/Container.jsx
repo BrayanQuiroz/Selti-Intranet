@@ -65,6 +65,15 @@ export const ContentInputButton = styled.div`
   width: ${props => props.width || '47%;'};
   height: 63px;
 
+  & .InputRight{
+    margin-right: 1rem;
+  }
+
+  & .SelectLabel{
+    margin-top:1rem;
+    font-size: 1.2rem;
+  }
+
   & button{
     margin-top: 2.5rem;
   }

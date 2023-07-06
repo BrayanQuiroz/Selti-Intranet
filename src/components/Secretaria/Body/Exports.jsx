@@ -35,7 +35,14 @@ export const columns = [
    {
       title: 'Acciones',
       dataIndex: 'acciones',
-      key: 'acciones',
+     key: 'acciones',
+     render: (_, record) => (
+      <div>
+        <button type="primary" >Editar</button>
+        <button type="danger" >Eliminar</button>
+      </div>
+    ),
+      
      },
    
 ];

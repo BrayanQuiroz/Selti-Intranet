@@ -56,16 +56,30 @@ const Nav = styled.nav`
    padding: 0 1.5rem 0 1.5rem;
    color: ${Colors.primareyColor};
    position: sticky;
-   top: 83.56px;
+   font-size: 20px;
+
+   & .content-rol{
+      margin-right: 2rem;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
 
    & div{
       display: flex;
       align-items: center;
+      /* justify-content: center ;; */
    }
 
    & p:first-of-type{
       margin-right: 0.5rem;
-      font-weight: 600;
+      font-weight: 700;
+   }
+
+   & p:nth-child(2){
+      /* margin-right: 0.5rem; */
+      font-weight: 500;
    }
 `;
 

@@ -67,13 +67,12 @@ const Index = (props) => {
    return (
       <ContainerBody>
          <div className='title'>
-            <h2>Usuarios Internos</h2>
-            <button className='addUser'onClick={() => setModalForm(true)}>+ Crear usuario</button>
+            <h2>Gestor de ediciones</h2>
+            <button className='addUser'onClick={() => setModalForm(true)}>+ Crear edición</button>
          </div>
          <div className='searchs'>
-            <Inputs label='Caso' width='170px' restriction="numeric"/>
-            <Inputs label='RUC' width='170px' restriction="numeric"/>
-            <Inputs label='DNI' width='170px' restriction="numeric"/>
+            <Inputs label='Edición' width='170px' restriction="numeric"/>
+            <Inputs label='Versión' width='170px' restriction="numeric"/>
             <div className='switch'>
                <Button width='100px' text='Filtar'/>
             </div>
@@ -89,33 +88,16 @@ const Index = (props) => {
          </div>
          <Modal
             className="my-custom-modal"
-            title="Crear usuario"
+            title="Crear Edición"
             open={modalForm}
             onCancel={() => setModalForm(false)}
             okText="Crear"
+            width={400}
             okButtonProps={{ style: { backgroundColor: '#DC2626' } }}>
             <form action="">
-               <ContentInputButton width='100%'>
-                  <Inputs  className='InputRight' label='Tipo de documento' width='150px' restriction="numeric" />
-                  <Inputs  label='Número de identidad' width='188px' restriction="numeric" />
-               </ContentInputButton>
-               <ContentInputButton width='100%'>
-                  <Inputs className='InputRight'  label='Nombre' width='150px' isDisabled={true} />
-                  <Inputs label='Correo electronico' width='188px' />
-               </ContentInputButton>
-               <RowContainer>
-                  <div>
-                     <label>Escoga tipo de documento: </label>
-                     <select>
-                        <option value="">SELECCIONE ROL </option>
-                        {selectOptions.map((option) => (
-                           <option key={option.CODPER} value={option.CODPER}>
-                                 {option.DESPER}
-                           </option>
-                           ))}
-                     </select>
-                  </div>
-               </RowContainer>
+            <Inputs label='Nombre de edición' width='100%' type='text' />
+               <Inputs label='Fecha de inicio' width='100%' type='date'/>
+               <Inputs label='Fecha fin' width='100%' type='date'/>
             </form>
          </Modal>
          <Modal

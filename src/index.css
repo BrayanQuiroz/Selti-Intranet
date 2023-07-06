@@ -16,6 +16,11 @@
   main {
   display: block;
   }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
   
   h1 {
   font-size: 2em;
@@ -213,4 +218,14 @@ body {
 
 
 
+
+.ant-modal-title {
+  color: #DC2626;
+  /* font-size: 30px; */
+}
+
+.my-custom-modal .ant-modal-title {
+  color: #DC2626;
+  font-size: 30px;
+}
 

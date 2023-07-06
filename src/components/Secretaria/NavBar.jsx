@@ -1,9 +1,9 @@
 import { NavTop,ButtonIcon,CloseLogin } from './Styles'
 
-const NavBar = ({toggleSidebar })=> {
+const NavBar = ()=> {
    return (
       <NavTop>
-         <ButtonIcon onClick={toggleSidebar} />
+         <ButtonIcon/>
          <div>
             <p>Usuario: </p>
             <p>ADIAZ</p>
